@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
+import { AppRoutingModuleModule } from './app-routing-module/app-routing-module.module';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -6,6 +8,10 @@ describe('AppComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [
         AppComponent
+      ],
+      imports: [
+        AppRoutingModuleModule,
+        HttpClientModule 
       ],
     }).compileComponents();
   });
